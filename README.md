@@ -1,3 +1,5 @@
+![Nursing Student Support Banner](banner.png)
+
 📘 Nursing Student Support – Portfolio
 
 Helping nursing students balance work, school, and life by providing professional academic support, tutoring, and study guidance.
