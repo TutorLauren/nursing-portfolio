@@ -6,119 +6,123 @@
   <title>Tutor Lauren - Nursing Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 70px; /* offset for header */
-    }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- HEADER -->
-<header class="bg-purple-700 text-white p-6">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center gap-4">
-    <!-- Logo -->
-    <div class="flex-shrink-0">
-      <img src="assets/$assignment_writing$_services.jpg" alt="Assignment Writing Services - Tutor Lauren"
-           class="h-20 w-auto rounded-lg shadow-md">
+  <!-- NAVBAR -->
+  <nav class="bg-purple-800 text-white sticky top-0 z-50 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-3">
+      <h1 class="font-bold text-lg">Tutor Lauren</h1>
+      <div class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#proof" class="hover:underline">Proof</a>
+        <a href="#samples" class="hover:underline">Samples</a>
+        <a href="#pricing" class="hover:underline">Pricing</a>
+        <a href="#case-studies" class="hover:underline">Case Studies</a>
+        <a href="#faq" class="hover:underline">FAQ</a>
+        <a href="#testimonials" class="hover:underline">Testimonials</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </div>
+      <button id="menuBtn" class="md:hidden focus:outline-none">☰</button>
     </div>
+    <div id="mobileMenu" class="hidden flex-col bg-purple-700 px-6 pb-4 md:hidden">
+      <a href="#about" class="py-2 border-b border-purple-600">About</a>
+      <a href="#proof" class="py-2 border-b border-purple-600">Proof</a>
+      <a href="#samples" class="py-2 border-b border-purple-600">Samples</a>
+      <a href="#pricing" class="py-2 border-b border-purple-600">Pricing</a>
+      <a href="#case-studies" class="py-2 border-b border-purple-600">Case Studies</a>
+      <a href="#faq" class="py-2 border-b border-purple-600">FAQ</a>
+      <a href="#testimonials" class="py-2 border-b border-purple-600">Testimonials</a>
+      <a href="#contact" class="py-2">Contact</a>
+    </div>
+  </nav>
 
-    <!-- Text -->
-    <div class="flex-1 text-center md:text-center">
-      <h1 class="text-2xl md:text-3xl font-bold">Tutor Lauren - Nursing Student Support</h1>
-      <p class="mt-2 text-sm md:text-base">Helping students balance work, life, and academics</p>
-      <p class="mt-2 text-sm md:text-base">
-        📱 <a href="https://wa.me/19145755171" class="text-white hover:underline">WhatsApp: +1 (914)575-5171</a> | 
-        📧 <a href="mailto:servicesassignmentwriting@gmail.com" class="text-white hover:underline">servicesassignmentwriting@gmail.com</a>
-      </p>
+  <!-- HEADER -->
+  <header class="bg-purple-700 text-white p-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center gap-4">
+      <div class="flex-shrink-0 flex justify-center md:justify-start">
+        <img src="assets/$assignment_writing$_services.jpg" alt="Assignment Writing Services - Tutor Lauren"
+             class="h-20 w-auto rounded-lg shadow-md">
+      </div>
+      <div class="flex-1 text-center md:text-center">
+        <h1 class="text-2xl md:text-3xl font-bold">Tutor Lauren - Nursing Student Support</h1>
+        <p class="mt-2 text-sm md:text-base">Helping students balance work, life, and academics</p>
+        <p class="mt-2 text-sm md:text-base">
+          📱 <a href="https://wa.me/19145755171" class="text-white hover:underline">WhatsApp: +1 (914)575-5171</a> | 
+          📧 <a href="mailto:servicesassignmentwriting@gmail.com" class="text-white hover:underline">servicesassignmentwriting@gmail.com</a>
+        </p>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
   <main class="max-w-6xl mx-auto p-6">
-
-    <!-- ABOUT ME -->
-    <section id="about" class="mb-12 text-center">
-      <h2 class="text-2xl font-bold text-purple-700 mb-4">About Me</h2>
+    <!-- ABOUT -->
+    <section id="about" class="mb-12">
+      <h2 class="text-2xl font-bold text-purple-700 mb-4">👩‍⚕️ About Me</h2>
       <p class="text-gray-700 leading-relaxed">
-        Hello and welcome — my name is <span class="font-semibold">Tutor Lauren</span>, and this is my portfolio. I have been helping nursing students with academic writing and full class management since <span class="font-semibold">2016</span>. Many of my clients are hardworking students who are balancing jobs, families, and studies, and I make it easier for them to succeed academically without stress.
+        Hello and welcome — my name is Tutor Lauren, and this is my portfolio. I have been helping nursing students with academic writing and full class management since 2016. Many of my clients are hardworking students who are balancing jobs, families, and studies, and I make it easier for them to succeed academically without stress.
       </p>
-      <p class="text-gray-700 leading-relaxed mt-4">
-        My work is always <span class="font-semibold">plagiarism free</span>, <span class="font-semibold">AI free</span>, and <span class="font-semibold">written from scratch</span>. I carefully research every paper, apply APA formatting, and ensure originality and high quality. From essays and case studies to care plans, research projects, and entire course management, I have helped nursing students achieve excellent grades while focusing on their careers and personal lives.
+      <p class="text-gray-700 mt-4 leading-relaxed">
+        My work is always plagiarism free, AI free, and written from scratch. I carefully research every paper, apply APA formatting, and ensure originality and high quality. From essays and case studies to care plans, research projects, and entire course management, I have helped nursing students achieve excellent grades while focusing on their careers and personal lives.
       </p>
-      <p class="text-gray-700 leading-relaxed mt-4">
+      <p class="text-gray-700 mt-4 leading-relaxed">
         My goal is simple: to help you achieve excellent grades while you focus on your personal and professional priorities. With reliable communication and proven results, I look forward to helping you succeed in your academic journey.
       </p>
     </section>
 
-    <!-- PROOF OF COMPLETED COURSES -->
-    <section id="proof" class="mb-12 text-center">
-      <h2 class="text-2xl font-bold text-purple-700 mb-4">Proof of Completed Courses</h2>
-      <p class="text-gray-600 mb-4">Below are anonymized screenshots showing successful completion of nursing course assessments and capstone projects. Click any image to enlarge.</p>
+    <!-- PROOF -->
+    <section id="proof" class="mb-12">
+      <h2 class="text-2xl font-bold text-purple-700 mb-4">📑 Proof of Completion</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white rounded-lg shadow p-4">
-          <img src="assets/proof1.jpg" alt="Course Completion Proof 1" class="rounded-lg shadow-md mb-4 cursor-pointer proof-img">
-          <p class="text-sm text-gray-600 text-center">Completed Assessments & Evaluations</p>
-        </div>
-        <div class="bg-white rounded-lg shadow p-4">
-          <img src="assets/proof2.jpg" alt="Course Completion Proof 2" class="rounded-lg shadow-md mb-4 cursor-pointer proof-img">
-          <p class="text-sm text-gray-600 text-center">Competency Criteria Achieved</p>
-        </div>
-        <div class="bg-white rounded-lg shadow p-4">
-          <img src="assets/proof3.jpg" alt="Course Completion Proof 3" class="rounded-lg shadow-md mb-4 cursor-pointer proof-img">
-          <p class="text-sm text-gray-600 text-center">Capstone Project Completed</p>
-        </div>
-        <div class="bg-white rounded-lg shadow p-4">
-          <img src="assets/proof4.jpg" alt="Course Completion Proof 4" class="rounded-lg shadow-md mb-4 cursor-pointer proof-img">
-          <p class="text-sm text-gray-600 text-center">Final Course Evaluation</p>
-        </div>
+        <img src="assets/proof1.jpg" class="rounded-lg shadow">
+        <img src="assets/proof2.jpg" class="rounded-lg shadow">
+        <img src="assets/proof3.jpg" class="rounded-lg shadow">
+        <img src="assets/proof4.jpg" class="rounded-lg shadow">
       </div>
     </section>
 
     <!-- WORK SAMPLES -->
-<section id="samples" class="mb-12 text-center">
-  <h2 class="text-2xl font-bold text-purple-700 mb-4">Work Samples (Downloads)</h2>
-  <div class="grid md:grid-cols-3 gap-6">
-    
-    <div class="bg-white rounded-lg shadow p-6">
-      <h3 class="font-semibold text-lg">Continuous Quality Improvement (CQI)</h3>
-      <p class="text-gray-600 mt-2">An academic paper exploring CQI strategies in healthcare settings with real-world nursing applications.</p>
-      <a href="samples/sample1.docx" download class="inline-block mt-4 bg-purple-600 text-white px-4 py-2 rounded">Download Word File</a>
-    </div>
-
-    <div class="bg-white rounded-lg shadow p-6">
-      <h3 class="font-semibold text-lg">Effective Safety & Health Training</h3>
-      <p class="text-gray-600 mt-2">Coursework analyzing the design and effectiveness of health and safety training for clinical staff.</p>
-      <a href="samples/sample2.docx" download class="inline-block mt-4 bg-purple-600 text-white px-4 py-2 rounded">Download Word File</a>
-    </div>
-
-    <div class="bg-white rounded-lg shadow p-6">
-      <h3 class="font-semibold text-lg">Health Care Reform & Equity</h3>
-      <p class="text-gray-600 mt-2">A research paper discussing reform policies and their impact on equity and accessibility in healthcare.</p>
-      <a href="samples/sample3.docx" download class="inline-block mt-4 bg-purple-600 text-white px-4 py-2 rounded">Download Word File</a>
-    </div>
-
-    <div class="bg-white rounded-lg shadow p-6">
-      <h3 class="font-semibold text-lg">Health Information Management</h3>
-      <p class="text-gray-600 mt-2">Explores the role of health information systems in improving patient outcomes and data security.</p>
-      <a href="samples/sample4.docx" download class="inline-block mt-4 bg-purple-600 text-white px-4 py-2 rounded">Download Word File</a>
-    </div>
-
-    <div class="bg-white rounded-lg shadow p-6">
-      <h3 class="font-semibold text-lg">Structural Racism & Healthcare</h3>
-      <p class="text-gray-600 mt-2">An analysis of how structural racism affects healthcare access, equity, and nursing practice.</p>
-      <a href="samples/sample5.docx" download class="inline-block mt-4 bg-purple-600 text-white px-4 py-2 rounded">Download Word File</a>
-    </div>
-    
-  </div>
-</section>
+    <section id="samples" class="mb-12 text-center">
+      <h2 class="text-2xl font-bold text-purple-700 mb-4">📂 Work Samples (Downloads)</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow p-6">
+          <h3 class="font-semibold text-lg">Continuous Quality Improvement (CQI)</h3>
+          <p class="text-gray-600 mt-2">An academic paper exploring CQI strategies in healthcare settings with real-world nursing applications.</p>
+          <a href="samples/sample1.docx" download class="inline-block mt-4 bg-purple-600 text-white px-4 py-2 rounded">Download Word File</a>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6">
+          <h3 class="font-semibold text-lg">Effective Safety & Health Training</h3>
+          <p class="text-gray-600 mt-2">Coursework analyzing the design and effectiveness of health and safety training for clinical staff.</p>
+          <a href="samples/sample2.docx" download class="inline-block mt-4 bg-purple-600 text-white px-4 py-2 rounded">Download Word File</a>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6">
+          <h3 class="font-semibold text-lg">Health Care Reform & Equity</h3>
+          <p class="text-gray-600 mt-2">A research paper discussing reform policies and their impact on equity and accessibility in healthcare.</p>
+          <a href="samples/sample3.docx" download class="inline-block mt-4 bg-purple-600 text-white px-4 py-2 rounded">Download Word File</a>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6">
+          <h3 class="font-semibold text-lg">Health Information Management</h3>
+          <p class="text-gray-600 mt-2">Explores the role of health information systems in improving patient outcomes and data security.</p>
+          <a href="samples/sample4.docx" download class="inline-block mt-4 bg-purple-600 text-white px-4 py-2 rounded">Download Word File</a>
+        </div>
+        <div class="bg-white rounded-lg shadow p-6">
+          <h3 class="font-semibold text-lg">Structural Racism & Healthcare</h3>
+          <p class="text-gray-600 mt-2">An analysis of how structural racism affects healthcare access, equity, and nursing practice.</p>
+          <a href="samples/sample5.docx" download class="inline-block mt-4 bg-purple-600 text-white px-4 py-2 rounded">Download Word File</a>
+        </div>
+      </div>
+    </section>
 
     <!-- PRICING -->
     <section id="pricing" class="py-16 text-center">
       <h2 class="text-3xl font-bold mb-8">💰 Pricing & Packages</h2>
-      <p class="text-center text-gray-600 mb-12">Affordable rates: <span class="font-semibold">$15 per page</span> (negotiable depending on deadline and paper complexity).</p>
+      <p class="text-center text-gray-600 mb-12">
+        Affordable rates: <span class="font-semibold">$15 per page</span> (negotiable depending on deadline and paper complexity).
+      </p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Essay Writing -->
+        <!-- Pricing Cards -->
         <div class="bg-white shadow-lg rounded-lg p-6">
           <h3 class="font-semibold text-lg mb-2">Essay Writing</h3>
           <p class="text-gray-600 mb-4">$12 per page <br><span class="text-sm">(negotiable)</span></p>
@@ -130,7 +134,6 @@
           <a href="https://wa.me/19145755171" class="bg-purple-700 text-white px-4 py-2 rounded-lg block">Start on WhatsApp</a>
           <a href="mailto:servicesassignmentwriting@gmail.com" class="mt-2 bg-green-600 text-white px-4 py-2 rounded-lg block">Start by Email</a>
         </div>
-        <!-- Capstone Projects -->
         <div class="bg-white shadow-lg rounded-lg p-6 border-2 border-purple-700">
           <h3 class="font-semibold text-lg mb-2">Capstone Projects</h3>
           <p class="text-gray-600 mb-4">Custom Quote</p>
@@ -142,7 +145,6 @@
           <a href="https://wa.me/19145755171" class="bg-purple-700 text-white px-4 py-2 rounded-lg block">Start on WhatsApp</a>
           <a href="mailto:servicesassignmentwriting@gmail.com" class="mt-2 bg-green-600 text-white px-4 py-2 rounded-lg block">Start by Email</a>
         </div>
-        <!-- Full Course Management -->
         <div class="bg-white shadow-lg rounded-lg p-6">
           <h3 class="font-semibold text-lg mb-2">Full Course Management</h3>
           <p class="text-gray-600 mb-4">Custom Quote</p>
@@ -158,116 +160,103 @@
     </section>
 
     <!-- CASE STUDIES -->
-    <section id="case-studies" class="py-16 bg-gray-50 text-center">
-      <h2 class="text-3xl font-bold mb-12">📊 Case Studies (Real Results)</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white shadow-lg rounded-lg p-6">
-          <h3 class="font-semibold text-lg mb-2">BSN Student – Fast Deadline</h3>
-          <p class="text-gray-600 text-sm mb-4">A student had only 2 days for a 5-page care plan. Delivered at <strong>$15/page</strong>, helping her save money while still achieving A-.</p>
-          <span class="inline-block mt-2 text-purple-700 font-semibold">✅ Result: A- Grade</span>
-        </div>
-        <div class="bg-white shadow-lg rounded-lg p-6">
-          <h3 class="font-semibold text-lg mb-2">MSN Student – Full Course</h3>
-          <p class="text-gray-600 text-sm mb-4">Managed an entire online MSN class with weekly papers, discussions, and exams. Student kept working full-time and received consistent A- grades.</p>
-          <span class="inline-block mt-2 text-purple-700 font-semibold">✅ Result: 92% Course Average</span>
-        </div>
-        <div class="bg-white shadow-lg rounded-lg p-6">
-          <h3 class="font-semibold text-lg mb-2">Capstone Project – Capella</h3>
-          <p class="text-gray-600 text-sm mb-4">Assisted with full capstone: proposal, IRB approval, data analysis, and final submission. Guidance ensured a smooth process.</p>
-          <span class="inline-block mt-2 text-purple-700 font-semibold">✅ Result: Approved & Graduated</span>
-        </div>
-      </div>
-    </section>
+<section id="case-studies" class="mb-16 text-center">
+  <h2 class="text-3xl font-bold text-purple-700 mb-8">📊 Case Studies (Real Results)</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="bg-white shadow-lg rounded-xl p-6 border-t-4 border-purple-600">
+      <h3 class="font-semibold text-lg text-purple-700">BSN Student – Fast Deadline</h3>
+      <p class="mt-3 text-gray-600">A student had only 2 days for a 5-page care plan. Delivered at $15/page, helping her save money while still achieving A-.</p>
+      <p class="mt-3 font-semibold text-green-600">✅ Result: A- Grade</p>
+    </div>
+    <div class="bg-white shadow-lg rounded-xl p-6 border-t-4 border-purple-600">
+      <h3 class="font-semibold text-lg text-purple-700">MSN Student – Full Course</h3>
+      <p class="mt-3 text-gray-600">Managed an entire online MSN class with weekly papers, discussions, and exams. Student kept working full-time and received consistent A- grades.</p>
+      <p class="mt-3 font-semibold text-green-600">✅ Result: 92% Course Average</p>
+    </div>
+    <div class="bg-white shadow-lg rounded-xl p-6 border-t-4 border-purple-600">
+      <h3 class="font-semibold text-lg text-purple-700">Capstone Project – Capella</h3>
+      <p class="mt-3 text-gray-600">Assisted with full capstone: proposal, IRB approval, data analysis, and final submission. Guidance ensured a smooth process.</p>
+      <p class="mt-3 font-semibold text-green-600">✅ Result: Approved & Graduated</p>
+    </div>
+  </div>
+</section>
 
-    <!-- FAQ -->
-    <section id="faq" class="py-16 text-center">
-      <h2 class="text-3xl font-bold mb-12">❓ Frequently Asked Questions</h2>
-      <div class="max-w-4xl mx-auto space-y-6 text-left">
-        <div>
-          <h3 class="font-semibold">Is your work plagiarism-free and AI-free?</h3>
-          <p class="text-gray-600">Yes, 100% plagiarism and AI free and Turnitin-safe. Every paper is original.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold">How fast can you deliver?</h3>
-          <p class="text-gray-600">I handle urgent papers in 6–12 hours, depending on length and complexity.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold">What if I’m not satisfied?</h3>
-          <p class="text-gray-600">Revisions are always free until you’re satisfied with the result.</p>
-        </div>
-      </div>
-    </section>
+<!-- FAQ -->
+<section id="faq" class="mb-16 text-center">
+  <h2 class="text-3xl font-bold text-purple-700 mb-8">❓ Frequently Asked Questions</h2>
+  <div class="max-w-3xl mx-auto text-left">
+    <details class="bg-white p-4 rounded-lg shadow mb-3">
+      <summary class="font-semibold cursor-pointer">Is your work plagiarism-free and AI-free?</summary>
+      <p class="mt-2 text-gray-600">Yes, 100% plagiarism and AI free and Turnitin-safe. Every paper is original.</p>
+    </details>
+    <details class="bg-white p-4 rounded-lg shadow mb-3">
+      <summary class="font-semibold cursor-pointer">How fast can you deliver?</summary>
+      <p class="mt-2 text-gray-600">I handle urgent papers in 6–12 hours, depending on length and complexity.</p>
+    </details>
+    <details class="bg-white p-4 rounded-lg shadow">
+      <summary class="font-semibold cursor-pointer">What if I’m not satisfied?</summary>
+      <p class="mt-2 text-gray-600">Revisions are always free until you’re satisfied with the result.</p>
+    </details>
+  </div>
+</section>
 
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="py-16 bg-gray-50 text-center">
-      <h2 class="text-3xl font-bold mb-12">💬 What Students Say</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white shadow-md rounded-lg p-6">
-          <p class="italic text-gray-700">“Lauren helped me manage my entire class while I was working full time. I passed with ease!”</p>
-          <p class="mt-4 font-semibold text-purple-700">– Nursing Student, Capella</p>
-        </div>
-        <div class="bg-white shadow-md rounded-lg p-6">
-          <p class="italic text-gray-700">“Clear explanations and timely submissions. Highly recommend for busy students.”</p>
-          <p class="mt-4 font-semibold text-purple-700">– MSN Student</p>
-        </div>
-        <div class="bg-white shadow-md rounded-lg p-6">
-          <p class="italic text-gray-700">“Professional, reliable, and always delivered quality work ahead of deadlines.”</p>
-          <p class="mt-4 font-semibold text-purple-700">– Nursing Capstone Student</p>
-        </div>
-        <div class="bg-white shadow-md rounded-lg p-6">
-          <p class="italic text-gray-700">“I was overwhelmed balancing work and study. This support helped me graduate.”</p>
-          <p class="mt-4 font-semibold text-purple-700">– BSN Student</p>
-        </div>
-        <div class="bg-white shadow-md rounded-lg p-6">
-          <p class="italic text-gray-700">“Thanks to this service, I could focus on family while still excelling in my class.”</p>
-          <p class="mt-4 font-semibold text-purple-700">– Online RN-BSN Student</p>
-        </div>
-        <div class="bg-white shadow-md rounded-lg p-6">
-          <p class="italic text-gray-700">“Very responsive on WhatsApp, answered all my questions, and handled everything perfectly.”</p>
-          <p class="mt-4 font-semibold text-purple-700">– Nursing Student</p>
-        </div>
-      </div>
-    </section>
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="mb-16 text-center">
+  <h2 class="text-3xl font-bold text-purple-700 mb-8">💬 What Students Say</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="bg-white shadow rounded-xl p-6">
+      <p class="italic text-gray-700">“Lauren helped me manage my entire class while I was working full time. I passed with ease!”</p>
+      <p class="mt-3 text-sm font-semibold text-purple-600">– Nursing Student, Capella</p>
+    </div>
+    <div class="bg-white shadow rounded-xl p-6">
+      <p class="italic text-gray-700">“Clear explanations and timely submissions. Highly recommend for busy students.”</p>
+      <p class="mt-3 text-sm font-semibold text-purple-600">– MSN Student</p>
+    </div>
+    <div class="bg-white shadow rounded-xl p-6">
+      <p class="italic text-gray-700">“Professional, reliable, and always delivered quality work ahead of deadlines.”</p>
+      <p class="mt-3 text-sm font-semibold text-purple-600">– Nursing Capstone Student</p>
+    </div>
+    <div class="bg-white shadow rounded-xl p-6">
+      <p class="italic text-gray-700">“I was overwhelmed balancing work and study. This support helped me graduate.”</p>
+      <p class="mt-3 text-sm font-semibold text-purple-600">– BSN Student</p>
+    </div>
+    <div class="bg-white shadow rounded-xl p-6">
+      <p class="italic text-gray-700">“Thanks to this service, I could focus on family while still excelling in my class.”</p>
+      <p class="mt-3 text-sm font-semibold text-purple-600">– Online RN-BSN Student</p>
+    </div>
+    <div class="bg-white shadow rounded-xl p-6">
+      <p class="italic text-gray-700">“Very responsive on WhatsApp, answered all my questions, and handled everything perfectly.”</p>
+      <p class="mt-3 text-sm font-semibold text-purple-600">– Nursing Student</p>
+    </div>
+  </div>
+</section>
 
-    <!-- CTA -->
+    <!-- CONTACT -->
     <section id="contact" class="py-16 text-center">
       <h2 class="text-3xl font-bold mb-6">🚀 Ready to Succeed?</h2>
       <p class="mb-6 text-gray-600">Contact me today and let’s make your nursing journey stress-free.</p>
-      <a href="https://wa.me/19145755171" class="bg-green-600 text-white px-6 py-3 rounded-lg mr-4">📱 WhatsApp Me</a>
-      <a href="mailto:servicesassignmentwriting@gmail.com" class="bg-purple-700 text-white px-6 py-3 rounded-lg">📧 Email Me</a>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+        <a href="https://wa.me/19145755171" class="bg-green-600 text-white px-6 py-3 rounded-lg w-full md:w-auto">📱 WhatsApp Me</a>
+        <a href="mailto:servicesassignmentwriting@gmail.com" class="bg-purple-700 text-white px-6 py-3 rounded-lg w-full md:w-auto">📧 Email Me</a>
+      </div>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-purple-700 text-white text-center p-6">
+  <footer class="bg-purple-700 text-white text-center p-6 space-y-2">
     <p>&copy; 2025 Tutor Lauren | Nursing Student Support</p>
-    <p>
-      📱 <a href="https://wa.me/19145755171" class="text-white hover:underline">WhatsApp: +1 (914)575-5171</a> | 
-      📧 <a href="mailto:servicesassignmentwriting@gmail.com" class="text-white hover:underline">servicesassignmentwriting@gmail.com</a>
-    </p>
+    <div class="text-sm space-y-1">
+      <p>📱 <a href="https://wa.me/19145755171" class="text-white hover:underline">WhatsApp: +1 (914)575-5171</a></p>
+      <p>📧 <a href="mailto:servicesassignmentwriting@gmail.com" class="text-white hover:underline">servicesassignmentwriting@gmail.com</a></p>
+    </div>
   </footer>
 
-  <!-- MODAL -->
-  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
-    <span id="closeModal" class="absolute top-6 right-8 text-white text-3xl cursor-pointer">&times;</span>
-    <img id="modalImage" src="" class="max-w-4xl max-h-[90vh] rounded-lg shadow-lg">
-  </div>
-
+  <!-- MOBILE NAV SCRIPT -->
   <script>
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImage");
-    const closeModal = document.getElementById("closeModal");
-
-    document.querySelectorAll(".proof-img").forEach(img => {
-      img.addEventListener("click", () => {
-        modal.classList.remove("hidden");
-        modalImg.src = img.src;
-      });
-    });
-
-    closeModal.addEventListener("click", () => {
-      modal.classList.add("hidden");
-      modalImg.src = "";
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
     });
   </script>
 </body>
