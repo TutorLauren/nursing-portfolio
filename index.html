@@ -1,5 +1,3 @@
-Here's the updated code:
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +7,10 @@ Here's the updated code:
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
-
-  <!-- Image at the top to make it more engaging -->
-  <img src="assets/$assignment_writing$_services.jpg" alt="Assignment Writing Services - Tutor Lauren" class="w-full max-w-4xl mx-auto rounded-lg shadow-md mt-6 mb-8">
-
   <!-- Header -->
-  <header class="bg-purple-700 text-white p-6 text-center">
+  <header class="bg-purple-700 text-white p-6 text-center relative">
+    <!-- Image at the top-left -->
+    <img src="assets/$assignment_writing$_services.jpg" alt="Assignment Writing Services - Tutor Lauren" class="absolute left-6 top-1/2 -translate-y-1/2 h-24 w-auto rounded-lg shadow-md">
     <h1 class="text-3xl font-bold">Tutor Lauren - Nursing Student Support</h1>
     <p class="mt-2">Helping students balance work, life, and academics</p>
     <p class="mt-2">
@@ -49,15 +45,28 @@ Here's the updated code:
     <section id="proof" class="mb-12">
       <h2 class="text-2xl font-bold text-purple-700 mb-4">Proof of Completed Courses</h2>
       <p class="text-gray-600 mb-4">
-        To protect the privacy of my past students, I don't display their personal course completion screenshots directly on this public page. 
-        However, I am more than happy to share anonymized screenshots and detailed proof of course completions and assessments directly with you! 
-        <br><br>
-        Please feel free to reach out via WhatsApp at 
-        <a href="https://wa.me/19145755171" class="text-purple-700 hover:underline"><span class="font-semibold">+1 (914)575-5171</span></a> or email me at 
-        <a href="mailto:servicesassignmentwriting@gmail.com" class="text-purple-700 hover:underline"><span class="font-semibold">servicesassignmentwriting@gmail.com</span></a>, and I'll gladly provide these examples to showcase my proven track record. 
-        Your success is my priority, and I'm here to build your confidence! ✨
+        Below are anonymized screenshots showing successful completion of nursing course assessments and capstone projects. 
+        These serve as proof of my consistent academic support and results. 
       </p>
-      <!-- Removed image tags as requested -->
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Proof Image 1 -->
+        <div class="bg-white rounded-lg shadow p-4">
+          <img src="proof1.jpg" alt="Course Completion Proof 1" class="rounded-lg shadow-md mb-4 cursor-pointer proof-img">
+          <p class="text-sm text-gray-600 text-center">Completed Assessments & Evaluations</p>
+        </div>
+
+        <!-- Proof Image 2 -->
+        <div class="bg-white rounded-lg shadow p-4">
+          <img src="proof2.jpg" alt="Course Completion Proof 2" class="rounded-lg shadow-md mb-4 cursor-pointer proof-img">
+          <p class="text-sm text-gray-600 text-center">Competency Criteria Achieved</p>
+        </div>
+
+        <!-- Proof Image 3 -->
+        <div class="bg-white rounded-lg shadow p-4">
+          <img src="proof3.jpg" alt="Course Completion Proof 3" class="rounded-lg shadow-md mb-4 cursor-pointer proof-img">
+          <p class="text-sm text-gray-600 text-center">Capstone Project Completed</p>
+        </div>
+      </div>
     </section>
 
     <!-- Work Samples -->
@@ -148,5 +157,35 @@ Here's the updated code:
       📧 <a href="mailto:servicesassignmentwriting@gmail.com" class="text-white hover:underline">servicesassignmentwriting@gmail.com</a>
     </p>
   </footer>
+
+  <!-- Modal for Image Preview -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
+    <span id="closeModal" class="absolute top-6 right-8 text-white text-3xl cursor-pointer">&times;</span>
+    <img id="modalImage" src="" class="max-w-4xl max-h-[90vh] rounded-lg shadow-lg">
+  </div>
+
+  <script>
+    // Modal Script
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeModal = document.getElementById("closeModal");
+
+    document.querySelectorAll(".proof-img").forEach(img => {
+      img.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+        modalImg.src = img.src;
+      });
+    });
+
+    closeModal.addEventListener("click", () => {
+      modal.classList.add("hidden");
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.add("hidden");
+      }
+    });
+  </script>
 </body>
 </html>
