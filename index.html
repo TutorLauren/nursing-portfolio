@@ -80,7 +80,7 @@
   
   <div class="text-left max-w-4xl mx-auto space-y-4">
     <p class="text-gray-700 leading-relaxed">
-      Hi there! I am <span class="font-semibold">Tutor Lauren</span>, and I specialize in helping nursing students like you succeed academically without the stress. I understand how overwhelming it can be to juggle clinicals, long shifts, family responsibilities, and constant deadlines — that is where I come in.
+      Hi there! I am <span class="font-semibold">Tutor Lauren</span>, and I specialize in helping nursing students like you succeed academically without stress. I understand how overwhelming it can be to juggle clinicals, long shifts, family responsibilities, and constant deadlines — that is where I come in.
     </p>
     <p class="text-gray-700 leading-relaxed">
       Since 2016, I have supported students with essays, care plans, case studies, research projects, and even full course management. My goal is to make your academic journey smoother, so you can focus on what matters most — your patients, your career, and your personal life.
@@ -93,10 +93,10 @@
       <li><span class="font-semibold">High confidentiality</span> — your personal information and work are fully protected.</li>
     </ul>
     <p class="text-gray-700 leading-relaxed">
-      Choosing me means you get a reliable academic partner who understands your challenges, delivers quality work on time, and treats your privacy with the utmost care. You can focus on your career and life while I handle the academic pressure.
+      Choosing me means you can focus on your career and life while I handle the academic pressure.
     </p>
     <p class="text-gray-700 leading-relaxed">
-      Let us work together to make your nursing journey smoother, stress-free, and successful. With my guidance, achieving excellent grades is not just possible, but it is guaranteed.
+      With my guidance, achieving excellent grades is not just possible, but it is guaranteed.
     </p>
   </div>
     </section>
@@ -112,22 +112,36 @@
   </div>
 </section>
 
-<!-- MODAL -->
-<div id="imageModal" class="hidden fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-  <span class="absolute top-4 right-6 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
-  <img id="modalImage" class="max-w-3xl max-h-[90vh] rounded-lg shadow-lg">
+<!-- Modal -->
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50">
+  <span id="closeModal" class="absolute top-4 right-6 text-white text-3xl cursor-pointer">&times;</span>
+  <img id="modalImage" class="max-w-[95%] max-h-[90%] object-contain rounded-lg shadow-lg">
 </div>
 
 <script>
-  function openModal(img) {
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImage");
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const closeModal = document.getElementById("closeModal");
+
+// Grab all proof images
+document.querySelectorAll("#proof img").forEach(img => {
+  img.addEventListener("click", () => {
     modal.classList.remove("hidden");
     modalImg.src = img.src;
+  });
+});
+
+// Close when clicking ×
+closeModal.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
+
+// Close when clicking anywhere outside the image
+modal.addEventListener("click", (e) => {
+  if (e.target !== modalImg) {
+    modal.classList.add("hidden");
   }
-  function closeModal() {
-    document.getElementById("imageModal").classList.add("hidden");
-  }
+});
 </script>
 
     <!-- WORK SAMPLES -->
@@ -166,7 +180,7 @@
     <section id="pricing" class="py-16 text-center">
       <h2 class="text-3xl font-bold mb-8">💰 Pricing & Packages</h2>
       <p class="text-center text-gray-600 mb-12">
-        Affordable rates: <span class="font-semibold">$15 per page</span> (negotiable depending on deadline and paper complexity).
+        Affordable rates: <span class="font-semibold">$12 per page</span> (negotiable depending on deadline and paper complexity).
       </p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Pricing Cards -->
